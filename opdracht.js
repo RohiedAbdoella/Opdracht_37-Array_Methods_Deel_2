@@ -2,10 +2,11 @@
 const superheroes = [
     {name: "Batman", alter_ego: "Bruce Wayne"}, 
     {name: "Superman", alter_ego: "Clark Kent"}, 
-    {name: "Spiderman", alter_ego: "Peter Parker"}]
+    {name: "Spiderman", alter_ego: "Peter Parker"}
+];
     
     // Hier komt jouw functie
-    const findSpiderMan = function (array) {
+    const findSpiderMan = function (superheroes) {
         return superheroes.find(superhero => superhero.name === "Spiderman");
         }
     
@@ -41,10 +42,11 @@ console.log(isItalyInTheGreat7(['Canada', 'France','Germany','Italy','Japan','Un
 
 //E deze extra checken
 const tenfold = function (array) {
-    array.forEach(function(numbers) {
-        return console.log(numbers * 10);
-        
+    let times10 = [];
+    array.forEach(number => {
+        times10.push(number * 10);
     });
+    return times10;
 }
 
 console.log(tenfold([1, 4, 3, 6, 9, 7, 11]));
@@ -61,7 +63,7 @@ console.log(isBelow100([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 101, 11, 77, 84, 9
 
 //G
 const  bigSum = function (array) {
-    return array.reduce((total, current) => total + current);
+    return array.reduce((accumulative, numbers) => accumulative + numbers);
 }
   console.log(bigSum([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234]))
   // result should be 1118
